@@ -1,8 +1,18 @@
-
+body,html{
+  font-size:62.5%;
+}
 
 /* ==========================================================================
-   Author's custom styles
+   Layout
    ========================================================================== */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    width: 100%;
+    padding:0;
+  }
+}
 
 .container{
   vertical-align: top;
@@ -17,15 +27,86 @@
 
 
 /* ==========================================================================
+   SECTION: Nav
+   ========================================================================== */
+
+nav.navbar{
+  margin-left:-15px;
+  margin-right:-15px;
+  border-bottom:1px solid #444;
+}
+
+.navbar a{
+  font-size:1.8rem;
+  font-weight:bold;
+  text-shadow:none!important;
+  text-transform:uppercase;
+  color:#B4DFF9;
+}
+
+
+
+
+/* ==========================================================================
    SECTION: Main Video
    ========================================================================== */
 
 
 
 .main-video{
-  background:rgba(255,0,0,0.3);
   border-right:1px solid #ccc;
+  background:#011622;
 }
+
+h2{
+  font-size:4rem;
+}
+
+.page-title{
+  color:#B4DFF9;
+}
+
+.main-video-player-wrapper{
+  height:500px;
+  width:100%;
+  background-image:url(http://placevaughnandfranco.it/img/900/400);
+  background-size:cover;
+  padding:50px;
+  z-index: 99;
+}
+
+.main-video-title{
+  color:#B4DFF9;
+  font-size:6rem;
+  line-height: 8rem;
+  font-weight:bold;
+}
+
+.btn-reserve{
+  width:150px;
+  height:150px;
+  border:5px solid #B4DFF9;
+  border-radius:50%;
+  /*margin-top:-50px;*/
+  float:right;
+  text-align:center;
+  line-height:150px;
+  background:#011622;
+  position: absolute;
+  right:20px;
+  top:20px;
+}
+
+.btn-reserve > span{
+  color:#B4DFF9;
+  font-size:1.6rem;
+  line-height:2rem;
+  margin:0 2rem;
+  text-transform:uppercase;
+  vertical-align:middle;
+  display: inline-block;
+}
+
 
 /* ==========================================================================
    SECTION: Sidebar
@@ -36,8 +117,24 @@
   float:right;
 }
 
+.sidebar-title-row{
+  padding:5px 0 0px 20px;
+  margin-right:-15px;
+}
+
 .sidebar-title{
   font-weight:bold;
+  font-size:1.2rem;
+  float:left;
+  line-height: 3.0rem;
+}
+
+.sidebar-autoplay{
+  line-height: 3.0rem;
+  float:right;
+  font-size:1.2rem;
+  font-weight:bold;
+  vertical-align: middle;
 }
 
 .video-item{
@@ -76,6 +173,7 @@
 
 .video-item .video-title{
   font-weight:bold;
+  font-size:1.4rem;
 }
 
 /* ==========================================================================
@@ -83,8 +181,6 @@
    ========================================================================== */
 
 .categories{
-
-  background:rgba(255,0,0,0.1);
   border-right:1px solid #ccc;
 }
 
@@ -111,7 +207,8 @@
   height:100%;
   background-image:url(http://placevaughnandfranco.it/img/300/201);
   background-size:cover;
-  padding:20px;
+  padding:40px 20px;
+  color:#B4DFF9;
 }
 
 .categories .row:nth-child(2n+0) .col-md-6:nth-child(2n+0) .video-stack > div.stack-cover{
@@ -148,8 +245,19 @@
 
 .video-stack .video-title{
   font-weight:bold;
-
+  font-size:3rem;
 }
+
+.cover-mask{
+  position:absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  background:rgba(0,0,0,0.2);
+  z-index: -1;
+}
+
 
 .video-stack .video-cover-row{
   position:absolute;
@@ -177,6 +285,8 @@
   text-align:right;
   float:right;
   color:white;
+  font-size:3.6rem;
+  text-align:center;
 }
 
 /* ==========================================================================
@@ -208,3 +318,31 @@ footer{
   color:#111;
 }
 
+
+/* ==========================================================================
+   SECTION: Autoplay Switch
+   ========================================================================== */
+
+.bootstrap-switch-autoplay {
+  border-radius: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background:darkblue;
+  padding: 4px 10px 4px 4px;
+  margin-left:5px;
+}
+
+.bootstrap-switch-autoplay .bootstrap-switch-label{
+  border-radius:100%!important;
+  background:lightblue;
+
+}
+
+.bootstrap-switch-autoplay .bootstrap-switch-container{
+}
+.bootstrap-switch-autoplay .bootstrap-switch-handle-on.bootstrap-switch-default,
+.bootstrap-switch-autoplay .bootstrap-switch-handle-off.bootstrap-switch-default,
+.bootstrap-switch-autoplay .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch-autoplay .bootstrap-switch-handle-off.bootstrap-switch-primary{
+  background:transparent;
+}

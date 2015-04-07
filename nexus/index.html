@@ -13,7 +13,8 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -26,7 +27,7 @@
   <div class="container">
     <section class="main-video col-xs-12 col-md-9">
 
-      <nav class="navbar ">
+      <nav class="navbar">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -45,10 +46,9 @@
             </ul>
           </div><!--/.nav-collapse -->
       </nav>
-
+      <a href="#" class="btn-reserve"><span>Reserve your seat</span></a>
       <h2 class="page-title">Cisco Event</h2>
-      <a href="#" class="btn-reserve">Reserve your seat</a>
-      <div class="main-video">
+      <div class="main-video-player-wrapper">
         <div class="main-video-title">Interview with Joe Pulizzi, Founder of Content Marketing</div>
         <a class="btn-play-main-video"><i class="fa fa-play"></i></a>
       </div>
@@ -60,8 +60,12 @@
     </section>
     <aside class="sidebar col-xs-12 col-md-3">
       <div class="sidebar-nav">
-        <div class="sidebar-title">NOW VIEWING</div>
-        <div class="sidebar-autoplay">autoplay on</div>
+        <div class="sidebar-title-row clearfix">
+          <div class="sidebar-title">NOW VIEWING</div>
+          <div class="sidebar-autoplay">autoplay on
+            <input data-wrapper-class="autoplay" data-handle-width="10" data-on-text="&nbsp;" data-off-text="&nbsp;" data-label-width="10" data-size="mini" type="checkbox" name="my-checkbox" checked>
+          </div>
+        </div>
       </div>
       <div class="video-item">
         <div class="video-thumb">
@@ -72,7 +76,9 @@
         <div class="video-title">Lorem Ipsum of IpsumIpsum Ipsum</div>
       </div>
 
-      <div class="sidebar-title">UP NEXT</div>
+      <div class="sidebar-title-row clearfix">
+        <div class="sidebar-title">UP NEXT</div>
+      </div>
       <div class="video-items">
         <div class="video-item">
           <div class="video-thumb">
@@ -150,7 +156,7 @@
 
     </aside>
     <section class="categories col-xs-12 col-md-9">
-      categories
+      <h2>Categories</h2>
 
       <div class="categories-header row">
 
@@ -161,11 +167,11 @@
           <div class="video-stack">
             <div class="stack-cover">
               <div class="video-title">Interview Series</div>
-
               <div class="video-cover-row">
                 <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
                 <div class="btn-video-cta"><i class="fa fa-play"></i></div>
               </div>
+              <div class="cover-mask"></div>
             </div>
 
             <div class="stack-shadow"></div>
@@ -181,6 +187,7 @@
                 <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
                 <div class="btn-video-cta"><i class="fa fa-play"></i></div>
               </div>
+              <div class="cover-mask"></div>
             </div>
 
             <div class="stack-shadow"></div>
@@ -199,6 +206,7 @@
                 <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
                 <div class="btn-video-cta"><i class="fa fa-play"></i></div>
               </div>
+              <div class="cover-mask"></div>
             </div>
 
             <div class="stack-shadow"></div>
@@ -214,38 +222,7 @@
                 <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
                 <div class="btn-video-cta"><i class="fa fa-play"></i></div>
               </div>
-            </div>
-
-            <div class="stack-shadow"></div>
-            <div class="stack-shadow"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="video-stack">
-            <div class="stack-cover">
-              <div class="video-title">Interview Series</div>
-
-              <div class="video-cover-row">
-                <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
-                <div class="btn-video-cta"><i class="fa fa-play"></i></div>
-              </div>
-            </div>
-
-            <div class="stack-shadow"></div>
-            <div class="stack-shadow"></div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="video-stack">
-            <div class="stack-cover">
-              <div class="video-title">Interview Series</div>
-
-              <div class="video-cover-row">
-                <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
-                <div class="btn-video-cta"><i class="fa fa-play"></i></div>
-              </div>
+              <div class="cover-mask"></div>
             </div>
 
             <div class="stack-shadow"></div>
@@ -263,6 +240,7 @@
                 <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
                 <div class="btn-video-cta"><i class="fa fa-play"></i></div>
               </div>
+              <div class="cover-mask"></div>
             </div>
 
             <div class="stack-shadow"></div>
@@ -278,6 +256,41 @@
                 <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
                 <div class="btn-video-cta"><i class="fa fa-play"></i></div>
               </div>
+              <div class="cover-mask"></div>
+            </div>
+
+            <div class="stack-shadow"></div>
+            <div class="stack-shadow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="video-stack">
+            <div class="stack-cover">
+              <div class="video-title">Interview Series</div>
+
+              <div class="video-cover-row">
+                <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
+                <div class="btn-video-cta"><i class="fa fa-play"></i></div>
+              </div>
+              <div class="cover-mask"></div>
+            </div>
+
+            <div class="stack-shadow"></div>
+            <div class="stack-shadow"></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="video-stack">
+            <div class="stack-cover">
+              <div class="video-title">Interview Series</div>
+
+              <div class="video-cover-row">
+                <div class="video-view-all">View all <span class="video-view-all-count"></span> videos</div>
+                <div class="btn-video-cta"><i class="fa fa-play"></i></div>
+              </div>
+              <div class="cover-mask"></div>
             </div>
 
             <div class="stack-shadow"></div>
@@ -386,7 +399,7 @@
   </script>
 
   <script src="js/vendor/bootstrap.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 
